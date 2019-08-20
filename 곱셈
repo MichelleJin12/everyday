@@ -1,0 +1,26 @@
+//곱셈
+
+세자리 * 세자리 해서 각 자리수 마다 나오는 값을 출력하고 맨마지막에 답을 출력하는 문제이다.
+
+
+#include <iostream>
+
+int main()
+{
+	int a;
+	std::cin >> a;
+	int b;
+	std::cin >> b;
+
+	std::cout << a * ((b % 100) % 10) << std::endl;
+	std::cout << a * ((((b % 100) - ((b % 100) % 10)))/10) << std::endl;
+	std::cout << a * (((b - ((b % 100) - ((b % 100) % 10))))/100) << std::endl;
+	std::cout << a * b;
+
+	return 0;
+}
+
+좀 조잡하게 풀었다.
+세자리 * 1의 자리수
+세자리 * 10의 자리수
+세자리 * 100의 자리수 
