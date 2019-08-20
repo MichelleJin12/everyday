@@ -1,0 +1,30 @@
+//X보다 작은 수
+
+#include <iostream>
+int A[10001] = { 0 };
+
+int main()
+{
+	int N, X;
+	std::cin >> N >> X;
+	for (int i = 0; i < N; i++)
+	{
+		int a;
+		std::cin >> a;
+		A[i] = a;
+	}
+	for (int j = 0; j < N; j++)
+	{
+		if (A[j] < X)
+		{
+			std::cout << A[j] << " ";
+		}
+	}
+
+	return 0;
+}
+
+
+4초나 걸렸다..........
+이 문제로 새로 알게 된 것....
+입력할때 공백쓰고 여러 숫자 입력해도 하나만 입력받는 것을 반복문으로 돌리면 들어감 ㅇㅇ..
