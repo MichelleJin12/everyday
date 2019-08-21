@@ -1,0 +1,27 @@
+//최소, 최대
+
+#include <iostream>
+#include <algorithm>
+
+int arr[1000000];
+int main()
+{
+	int N;
+	std::cin >> N;
+	for (int i = 0; i < N; i++)
+	{
+		std::cin >> arr[i];
+	}
+	std::sort(arr, arr+N);
+	std::cout << arr[0] << " " << arr[N-1];
+	return 0;
+}
+
+
+//아파곤해돌아가시겠다......깔짝깔짝 쉬운문제만 풀고 있는데 너무 히들다 ㅋㅋㅋ
+//이 것은 여러 숫자 중에 최대 최소를 구하는 문제이다...
+/*
+c++에서 자동으로 sort해주는 함수를 쓰면 편하고
+직접 구현해도 좋음 버블소팅,,,그냥소팅,,,?ㅋㅋㅋㅋ등등
+피곤해액
+*/
