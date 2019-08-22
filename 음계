@@ -1,0 +1,39 @@
+//음계
+
+#include <iostream>
+
+int main()
+{
+	int arr[8];
+	for (int i = 0; i < 8; i++)
+	{
+		std::cin >> arr[i];
+	}
+	for (int i = 0; i < 7; i++)
+	{
+		if (arr[i + 1] == arr[i] + 1)
+		{
+			if(i == 6)
+				std::cout << "ascending" << std::endl;
+		}
+		else if (arr[i] == arr[i + 1] + 1)
+		{
+			if(i == 6)
+				std::cout << "descending" << std::endl;
+		}
+		else
+		{
+				std::cout << "mixed" << std::endl;
+				break;
+		}
+	}
+
+	return 0;
+}
+
+이거 너무 어이없는 문제였다.. 틀려서 무슨 테스트케이스 놓쳤나하고 계속 고민했는데
+영어 스펠링 틀린거였음ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+아놔......
+
+먼저 배열에 싹다 넣고 0부터6까지 i변해가면서 i+1과 i를 계속 비교한다.
+6까지 갔을떄 다 똑같으면 as나 des중 하나로 하고 하나라도 다르면 else에 가서 mixed가 된다.
