@@ -1,0 +1,29 @@
+//최댓값
+
+#include <iostream>
+
+int main()
+{
+	int arr[9];
+	for (int i = 0; i < 9; i++)
+	{
+		std::cin >> arr[i];
+	}
+	int temp = arr[0]; int a;
+	for (int i = 0; i < 9; i++)
+	{
+		
+		if (arr[i] >= temp)
+		{
+			temp = arr[i];
+			a = i;
+		}
+	}
+	std::cout << temp << std::endl;
+	std::cout << a+1 << std::endl;
+
+	return 0;
+}
+
+배열에 9개의 숫자를 저장해놓고 최댓값과 최댓값의 번호를 출력하는 프로그램이다.
+temp와 a를 사용해서 최댓값과 인덱스 번호를 저장하고 a에다 1을 더해줘야함....
