@@ -1,0 +1,36 @@
+//8958
+
+#include <iostream>
+#include <string>
+
+int main()
+{
+	int T;
+	std::cin >> T;
+	while (T--)
+	{
+		int ans = 0, counter = 1;
+		std::string str;
+		std::cin >> str;
+
+		for (int j = 0; j < str.size(); j++)
+		{
+			if (str[j] == 'O')
+			{
+				ans += counter;
+				counter++;
+			}
+			if (str[j] == 'X')
+			{
+				counter = 1;
+			}
+		}
+
+		std::cout << ans << std::endl;
+	}
+
+
+	return 0;
+}
+
+문자열로 받아서 각각 문자를 읽으면서 O가 반복되면 카운터를 1씩 늘려서 
