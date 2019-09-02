@@ -1,0 +1,16 @@
+//11654
+
+#include <iostream>
+
+int main()
+{
+	char c;
+	std::cin >> c;
+	std::cout << int(c);
+
+	return 0;
+}
+
+
+
+문자를 숫자로 바꾸면 아스키 코드 번호로 
