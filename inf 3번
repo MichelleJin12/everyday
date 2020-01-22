@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(0);
+
+
+	int N, sum = 0;
+	cin >> N;
+	for (int i = 1; i < N; i++) {
+		if (N % i == 0) {
+			cout << i;
+			if (i != N / 2) {
+				cout << " + ";
+			}
+			sum += i;
+		}
+	}
+	cout << " = " << sum;
+
+}
