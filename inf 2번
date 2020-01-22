@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(0);
+
+
+	int A, B, sum = 0;
+	cin >> A >> B;
+	for (int i = A; i <= B; i++) {
+		cout << i;
+		if (i != B) {
+			cout << " +";
+		}
+		sum += i;
+	}
+	cout << " = " << sum;
+
+}
