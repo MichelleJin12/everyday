@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int reverse(int x) {
+	int tmp, sum = 0;
+	while (x > 0) {
+		if (x % 10 == 0 && sum == 0) x /= 10;
+		else {
+			sum += x % 10;
+			sum *= 10;
+			x /= 10;
+		}
+	}
+	sum /= 10;
+	return sum;
+}
+
+bool isPrime(int x) {
+	bool b = true;
+	for (int i = 2; i <= x / 2; i++) { //i를 2부터 해야함..
+		if (x % i == 0) {
+			b = false;
+			break;
+		}
+	}
+	return b; //x랑 새로 정의한 변수랑 잊지 말자
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(0);
+
+	int N;
+	cin >> N;
+	while (N--) {
+		int a;
+		cin >> a;
+		if (isPrime(reverse(a)) && reverse(a)!=1) cout << reverse(a) << " ";
+	}
+
+	return 0;
+}
+
+//히든 케이스가 1000같은 1임... ㅂㄷ
+//중간에 0 들어가는 것도 고려해야한다.
